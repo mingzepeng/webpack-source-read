@@ -1,0 +1,10 @@
+{
+  "main": "./file",
+  "concord": {
+    "extensions": [
+      ".css",
+      ".ts",
+      ".js"
+    ]
+  }
+}
