@@ -111,6 +111,7 @@ exports.createResolver = function(options) {
 	if (!resolver) {
 		resolver = new Resolver(
 			useSyncFileSystemCalls
+				//用同步对异步进行封装，都使用异步的语法，方便切换
 				? new SyncAsyncFileSystemDecorator(fileSystem)
 				: fileSystem
 		);

@@ -6,7 +6,7 @@
 
 class Storage {
 	constructor(duration) {
-		this.duration = duration;
+		this.duration = duration;  // 4000
 		this.running = new Map();
 		this.data = new Map();
 		this.levels = [];
@@ -36,7 +36,7 @@ class Storage {
 		if (!this.interval && this.duration > 0 && !this.nextTick)
 			this.interval = setInterval(
 				this.tick,
-				Math.floor(this.duration / this.levels.length)
+				Math.floor(this.duration / this.levels.length) //4000 / 9 =444
 			);
 	}
 
