@@ -2,6 +2,8 @@
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
+// https://juejin.im/post/5e392957f265da574d0ff946
+
 "use strict";
 
 const ResolverFactory = require("./ResolverFactory");
@@ -20,7 +22,8 @@ const nodeContext = {
 
 const asyncResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
-	fileSystem: nodeFileSystem
+	fileSystem: nodeFileSystem,
+	// resolveToContext : true
 });
 module.exports = function resolve(
 	context,

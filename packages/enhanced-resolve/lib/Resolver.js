@@ -173,7 +173,8 @@ class Resolver extends Tapable {
 			message,
 			{
 				missing: resolveContext.missing,
-				stack: resolveContext.stack
+				stack: resolveContext.stack,
+				log: console.log,
 			},
 			(err, result) => {
 				if (!err && result) {
